@@ -24,9 +24,11 @@ function addWeek(date) {
   return day[dayindex];
 }
 
-function timeTravel({date, hour, minute, second}) {
-  date.setHours(hour);
-  date.setMinutes(minute);
-  date.setSeconds(second);
-  return date;
+function timeTravel({ date, hours, minet, second }) {
+  const newdate = new Date(date);
+
+  newdate.setHours(hours);
+  newdate.setMinutes(minet);
+  newdate.setSeconds(second);
+  return newdate;
 }
